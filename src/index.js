@@ -6,6 +6,7 @@ dotenv.config({
 	path:`./atlas-credentials.env`
 });
 
+
 const startServer = async () =>{
   try {
     await connectDB();
@@ -16,7 +17,7 @@ const startServer = async () =>{
     })
 
     app.listen(process.env.PORT,()=>{
-      console.log(`Server is running on port:$(process.env.PORT)`);
+      console.log(`Server is running on port:${process.env.PORT}`)
 
     })
   } catch (error) {
@@ -24,5 +25,4 @@ const startServer = async () =>{
     
   }
 }
-
 startServer();
